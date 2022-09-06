@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2? family= Anek+Malayalam:wght@100;400 & display=swap' );
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Anek Malayan', sans-serif;
+    background-color: #f8f9fa;
+    /* overflow-x: hidden; */
+}
+
+.grid-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'header' 
+    'main';
+    grid-template-rows: 100px auto;
+}
+
+/*#region Header */
+.header{
+    grid-area: header;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    background-color: #10502f;
+    box-shadow: 0px 2px 4px #888888;
+}
+
+.header figure{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.header nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 0.75em;
+}
+
+.header nav div{
+    line-height: 40px;
+    width: 150px;
+    color: #9db7a9
+}
+
+.nav-destacado{
+    border-bottom: 3px solid #ffffff;
+    color: #ffffff !important;
+}
+
+.nav-destacado:hover{
+    background-color: #0e482a;
+    cursor: pointer;
+}
+/*#endregion */
+
+/*#region Main*/
+.main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+}
+
+#conteudo{
+    text-align: center;
+    border: 1px solid #e9eaeb;
+    width: 750px;
+    background-color: #fff; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#topo{
+    width: 100%;
+    padding: 15px;
+    padding-left: 20px;
+    text-align: left;
+    background-color: #f1f3f4;
+    font-size: 0.85em;
+}
+
+#ano{
+    font-weight: 600;
+    color: #4285f4;
+}
+
+a:link{
+    text-decoration: none;
+    color: #70758d;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #70758d;
+}
+
+#linha{
+    width: 98%;
+    border-top: 1px solid #dadec0;
+}
+
+#tabela{
+    width: 100%;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+#tabela table{
+    border-collapse: collapse;
+}
+
+#tabela th{
+    font-weight: 100;
+    color: #70758d;
+    padding: 4px;
+    height: 35px;
+    font-size: 0.8em;
+
+    /* border: 1px solid red; */
+}
+
+.coluna-clube{
+    width: 50%;
+    text-align: left;
+}
+
+.coluna-ultimas-cinco{
+    width: 20%;
+}
+
+.coluna-ultimas-cinco img{
+    width: 13% !important;
+}
+
+#tabela img{
+    width: 25px;
+}
+
+#tabela td{
+    border-top: 1px solid #dadec0;
+    font-weight: 100;
+    color: #000;
+    padding: 4px;
+    height: 40px;
+    font-size: 0.9em;
+}
+
+.borda-azul{
+    border-left: 3px solid #4285f4;
+}
+
+.borda-laranja{
+    border-left: 3px solid #fa7b17;
+}
+
+.borda-verde{
+    border-left: 3px solid #34a853;
+}
+
+.borda-vermelho{
+    border-left: 3px solid #ea4335;
+}
+
+.coluna-bordas{
+    border-top: none !important;
+}
+
+#legenda{
+  display: flex;
+  width: 98%;
+  margin: 30px 0px;
+  padding: 15px;
+  text-align: left;
+  font-size: 0.75em;
+  background-color: #f8f9fa;
+  border: 1px solid #e9eaeb;
+  border-radius: 5px;
+}
+
+
+#legenda div{
+    width: 50%;
+}
+
+#legenda img{
+    width: 10px;
+}
+
+@media (max-width: 576px){
+    .header nav div{
+        width: 90px;
+        margin: 0px 2.5px;
+        font-size: 0.9em;
+    }
+
+
+    #conteudo{
+            width: 100vw;
+        }
+
+    #tabela td{
+            width: auto;
+            font-size: 0.75em;
+            height: 30px;
+            font-weight: 400;
+            padding: 2px;
+        }
+
+    #tabela img{
+            width: 15px;
+        }
+
+    .coluna-ultimas-cinco img{
+            width: 15px !important;
+        }
+
+    .coluna-ultimas-cinco{
+            width: 50%;
+        }
+
+
+    .coluna-clube{
+            width: 20%;
+        }   
+
+    #legenda{
+        flex-direction: column;
+        margin: 10px 0px;
+    }
+
+    #legenda div{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+
+}
+
+
+
+/*#endregion*/
