@@ -1,5 +1,8 @@
+/*#region Imports*/
 @import url('https://fonts.googleapis.com/css2? family= Anek+Malayalam:wght@100;400 & display=swap' );
+/*#endregion*/
 
+/*#region Geral*/
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +12,6 @@
 body{
     font-family: 'Anek Malayan', sans-serif;
     background-color: #f8f9fa;
-    /* overflow-x: hidden; */
 }
 
 .grid-container{
@@ -21,6 +23,7 @@ body{
     'main';
     grid-template-rows: 100px auto;
 }
+/*#endregion*/
 
 /*#region Header */
 .header{
@@ -46,8 +49,10 @@ body{
 
 .header nav div{
     line-height: 40px;
-    width: 150px;
-    color: #9db7a9
+    color: #9db7a9;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 0.8em;
 }
 
 .nav-destacado{
@@ -71,7 +76,7 @@ body{
 #conteudo{
     text-align: center;
     border: 1px solid #e9eaeb;
-    width: 750px;
+    width: 100%;
     background-color: #fff; 
 
     display: flex;
@@ -112,7 +117,6 @@ a:visited{
 #tabela{
     width: 100%;
     text-align: center;
-    /* border: 1px solid red; */
 }
 
 #tabela table{
@@ -125,21 +129,20 @@ a:visited{
     padding: 4px;
     height: 35px;
     font-size: 0.8em;
-
-    /* border: 1px solid red; */
 }
 
 .coluna-clube{
-    width: 50%;
+    width: 20%;
     text-align: left;
 }
 
 .coluna-ultimas-cinco{
-    width: 20%;
+    width: 50%;
 }
 
 .coluna-ultimas-cinco img{
-    width: 13% !important;
+    width: 7px !important;
+    font-size: 0.6em;
 }
 
 #tabela img{
@@ -152,7 +155,10 @@ a:visited{
     color: #000;
     padding: 4px;
     height: 40px;
-    font-size: 0.9em;
+    font-size: 0.6em;
+    height: 30px;
+    width: auto;
+    padding: 2px;
 }
 
 .borda-azul{
@@ -178,74 +184,100 @@ a:visited{
 #legenda{
   display: flex;
   width: 98%;
-  margin: 30px 0px;
   padding: 15px;
   text-align: left;
   font-size: 0.75em;
   background-color: #f8f9fa;
   border: 1px solid #e9eaeb;
   border-radius: 5px;
+  margin: 10px 0;
+
+  flex-direction: column;
+  margin: 10px 0;
 }
 
 
 #legenda div{
-    width: 50%;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 #legenda img{
     width: 10px;
 }
 
-@media (max-width: 576px){
+/*#endregion*/
+
+/*#region Media Query*/
+
+@media (min-width: 375px){
+    #tabela td{
+        font-size: 0.65em;
+    }
+}
+
+@media (min-width: 425px){
     .header nav div{
-        width: 90px;
-        margin: 0px 2.5px;
-        font-size: 0.9em;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
-
-    #conteudo{
-            width: 100vw;
-        }
-
     #tabela td{
-            width: auto;
-            font-size: 0.75em;
-            height: 30px;
-            font-weight: 400;
-            padding: 2px;
-        }
-
-    #tabela img{
-            width: 15px;
-        }
+        font-size: 0.7em;
+    }
 
     .coluna-ultimas-cinco img{
-            width: 15px !important;
-        }
+        width: 12px !important;
+    }
+}
 
-    .coluna-ultimas-cinco{
-            width: 50%;
-        }
+@media (min-width: 576px){
+    .header nav div{
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 1.1em;
+    }
 
+    #conteudo{
+        width: 576px;
+    }
+
+    #tabela td{
+        font-size: 0.9em;
+        height: 30px;
+        width: auto;
+        font-weight: 400;
+        padding: 2px;
+    }
+
+    #tabela img{
+        width:20px;
+    }
 
     .coluna-clube{
-            width: 20%;
-        }   
+        width: 50%;
+    }
+
+    .coluna-ultimas-cinco{
+        width: 20%;
+    }
 
     #legenda{
-        flex-direction: column;
-        margin: 10px 0px;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     #legenda div{
-        margin-bottom: 15px;
-        width: 100%;
+        width: 50%;
     }
-
 
 }
 
-
+@media (min-width: 768px){
+    #conteudo{
+        width: 750px;
+    }
+}
 
 /*#endregion*/
